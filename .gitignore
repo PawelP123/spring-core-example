@@ -31,7 +31,7 @@ hs_err_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-*.class
+target
 .idea
 
 # Generated files
