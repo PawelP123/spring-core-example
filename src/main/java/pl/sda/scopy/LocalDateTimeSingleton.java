@@ -8,12 +8,11 @@ import java.time.LocalDateTime;
 @Component("singletonBean")
 public class LocalDateTimeSingleton {
 
-    private LocalDateTime localDateTime;
-
+    private final LocalDateTime localDateTime;
 
 
     @Autowired
-    public LocalDateTimeSingleton(LocalDateTime localDateTime) {
+    public LocalDateTimeSingleton(final LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
 
     }

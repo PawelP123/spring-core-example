@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @Scope("prototype")
 public class LocalDateTimeNoSingleton {
 
-    private LocalDateTime localDate;
+    private final LocalDateTime localDate;
 
     @Autowired
-    public LocalDateTimeNoSingleton(LocalDateTime localDate) {
+    public LocalDateTimeNoSingleton(final LocalDateTime localDate) {
         this.localDate = localDate;
     }
 
