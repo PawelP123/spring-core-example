@@ -8,16 +8,16 @@ public class LocalDateTimeMain {
         ApplicationContext context = new AnnotationConfigApplicationContext(LocalDateTimeConfiguration.class);
 
         System.out.println("Prototype:");
-        context.getBean("localDateTimeNoSingleton", LocalDateTimeNoSingleton.class).showLocalDateTime();
+        context.getBean("prototypeBean", LocalDateTimeNoSingleton.class).showLocalDateTime();
         System.out.println("Singleton:");
-        context.getBean("localDateTimeSingleton", LocalDateTimeSingleton.class).showLocalDateTime();
+        context.getBean("singletonBean", LocalDateTimeSingleton.class).showLocalDateTime();
 
         Thread.sleep(100);
 
         System.out.println("Singleton:");
-        context.getBean("localDateTimeSingleton", LocalDateTimeSingleton.class).showLocalDateTime();
+        context.getBean("singletonBean", LocalDateTimeSingleton.class).showLocalDateTime();
         System.out.println("Prototype:");
-        context.getBean("localDateTimeNoSingleton", LocalDateTimeNoSingleton.class).showLocalDateTime();
+        context.getBean("prototypeBean", LocalDateTimeNoSingleton.class).showLocalDateTime();
 
     }
 }
